@@ -13,20 +13,16 @@
 }
 
 body {
-  background: linear-gradient(135deg, #3e2723 0%, #000 100%);
   font-family: "Sora", sans-serif;
+  background: linear-gradient(135deg, #3e2723 0%, #000 100%);
   color: #fff;
   line-height: 1.6;
-  scroll-behavior: smooth; /* Scrolling suave */
 }
 
-/* Containers com fundo branco */
 .container {
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 2rem;
-  margin: 1rem auto;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 /* Header fixo com logo e navegação */
@@ -184,8 +180,8 @@ header {
 
 /* Texto animado (span) para garantir cor verde */
 .typed-text {
-  color: #295827;
-  font-family: 'Sora', sans-serif;
+  color: #fff;
+  font-family: "Tanbuster", "Sora", sans-serif;
   font-weight: 700;
 }
 
@@ -193,7 +189,7 @@ header {
 .typed-text::after {
   content: "|";
   animation: blink 0.8s steps(1) infinite;
-  color: #295827;
+  color: #fff;
   margin-left: 2px;
 }
 
@@ -276,7 +272,8 @@ header {
   border-radius: 8px;
   width: 6rem;
   height: 6rem;
-  background-color: #f8f8f8;
+  background-color: #fff;
+  color: #222;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease;
 }
@@ -356,6 +353,7 @@ header {
   border-radius: 8px;
   overflow: hidden;
   background-color: #fff;
+  color: #222;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease;
 }
@@ -477,57 +475,91 @@ footer a:hover {
   color: #FFC300;
 }
 
+/* 1. Degradê contínuo para body e hero */
 body,
-.hero,
-.skill-card,
-.projeto-card,
-.contato-card,
-footer {
+.hero {
   background: linear-gradient(135deg, #3e2723 0%, #000 100%);
+  color: #fff;
 }
 
-/* Cor dourada legível para textos */
-body,
-.hero-text h2,
-.hero-text p,
+/* 2. Títulos com Tanbuster */
+@font-face {
+  font-family: "Tanbuster";
+  src: url("assets/fonts/TanBuster-Regular.woff2") format("woff2"),
+       url("assets/fonts/TanBuster-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .section-title,
-.section-subtitle,
+.hero-text h2,
+h1, h2, h3 {
+  font-family: "Tanbuster", "Sora", sans-serif;
+  color: #fff;
+}
+
+/* 3. Textos de corpo sempre brancos no fundo escuro */
+body,
+.hero-text p,
 .section-text,
-.skill-card span,
-.projeto-card h3,
-.projeto-card p,
-.contato-card h2,
-.contato-card p,
+.section-subtitle,
 .btn,
 .btn-primary,
 .btn-social,
 footer,
 footer a {
-  color: #FFD700; /* Dourado */
+  color: #fff;
 }
 
-/* Ajuste para links dourados no hover */
+/* 4. Containers brancos, texto preto dentro deles */
+.container,
+.skill-card,
+.projeto-card,
+.contato-card {
+  background-color: #fff;
+  color: #222;
+}
+
+/* 5. Títulos dentro de containers brancos continuam com Tanbuster e cor preta */
+.container .section-title,
+.container h2,
+.container h3,
+.container h1,
+.skill-card span,
+.projeto-card h3,
+.contato-card h2 {
+  font-family: "Tanbuster", "Sora", sans-serif;
+  color: #222;
+}
+
+/* 6. Textos dentro de containers brancos são pretos */
+.container p,
+.skill-card p,
+.projeto-card p,
+.contato-card p {
+  color: #222;
+}
+
+/* 7. Texto animado Hello World sempre branco */
+.typed-text,
+.typed-text::after {
+  color: #fff;
+  font-family: "Tanbuster", "Sora", sans-serif;
+  font-weight: 700;
+}
+
+/* 8. Remover qualquer cor dourada */
+.navbar a,
 .navbar a:hover,
-.btn-primary:hover,
-.btn-social:hover,
-footer a:hover {
-  color: #FFC300;
+footer a,
+footer a:hover,
+.skill-card span,
+.projeto-card h3,
+.contato-card h2 {
+  color: inherit;
 }
 
-/* Customização da scrollbar para scroll fluido */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #3e2723;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #000;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #222;
+/* 9. Scroll suave */
+html {
+  scroll-behavior: smooth;
 }
