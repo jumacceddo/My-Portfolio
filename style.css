@@ -475,12 +475,12 @@ footer a:hover {
   color: #FFC300;
 }
 
-/* 1. Degradê contínuo para body, hero, header e footer */
+/* 1. Degradê contínuo para body, header, hero e footer */
 body,
-.hero,
 header,
+.hero,
 footer {
-  background: linear-gradient(135deg, #3e2723 0%, #000 100%);
+  background: linear-gradient(135deg, #3e2723 0%, #000 100%) !important;
   color: #fff;
 }
 
@@ -495,9 +495,10 @@ footer {
 
 .section-title,
 .hero-text h2,
-h1, h2, h3 {
-  font-family: "Tanbuster", sans-serif;
-  color: #fff;
+h1, h2, h3,
+.logo {
+  font-family: "Tanbuster", "Sora", sans-serif !important;
+  color: #fff !important;
 }
 
 /* 3. Textos de corpo sempre brancos no fundo escuro */
@@ -510,16 +511,18 @@ body,
 .btn-social,
 footer,
 footer a {
-  color: #fff;
+  color: #fff !important;
 }
 
-/* 4. Mantenha containers brancos só para skills e contato */
+/* 4. Containers brancos só para skills e contato */
 .skills-grid,
-.contato-card {
-  background-color: #fff;
-  color: #222;
+.contato-card,
+.projetos-grid,
+.projeto-card,
+.container {
+  background-color: #fff !important;
+  color: #222 !important;
   border-radius: 8px;
-  padding: 2rem;
   box-shadow: 0 4px 6px rgba(0,0,0,0.08);
 }
 
@@ -527,23 +530,30 @@ footer a {
 .skills-grid .section-title,
 .skills-grid h2,
 .skills-grid h3,
-.contato-card h2 {
-  font-family: "Tanbuster", sans-serif;
-  color: #222;
+.contato-card h2,
+.projeto-card h3,
+.container h1,
+.container h2,
+.container h3 {
+  font-family: "Tanbuster", "Sora", sans-serif !important;
+  color: #222 !important;
 }
 
 /* 6. Textos dentro desses containers são pretos */
 .skills-grid p,
 .contato-card p,
-.skill-card span {
-  color: #222;
+.skill-card span,
+.projeto-card p,
+.container p,
+.container a {
+  color: #222 !important;
 }
 
-/* 7. Texto animado Hello World sempre branco */
+/* 7. Texto animado Hello World sempre branco no fundo escuro */
 .typed-text,
 .typed-text::after {
-  color: #fff;
-  font-family: "Tanbuster", sans-serif;
+  color: #fff !important;
+  font-family: "Tanbuster", "Sora", sans-serif !important;
   font-weight: 700;
 }
 
