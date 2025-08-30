@@ -49,7 +49,7 @@ header {
 }
 
 .logo .realce {
-  color: #ff00c8;
+  color: #335e32;
 }
 
 /* Navegação padrão (desktop) */
@@ -73,7 +73,7 @@ header {
   left: 0;
   width: 0%;
   height: 2px;
-  background-color: #ff00c8;
+  background-color: #335e32;
   transition: width 0.3s ease;
 }
 
@@ -82,7 +82,7 @@ header {
 }
 
 .navbar a:hover {
-  color: #ff00c8;
+  color: #460738;
 }
 
 /* Ícone do menu mobile */
@@ -151,8 +151,8 @@ header {
   width: 180px;
   height: 180px;
   border-radius: 50%;
-  border: 5px solid #ff00c8;
-  box-shadow: 0 0 25px #ff00c888;
+  border: 5px solid #335e32;
+  box-shadow: 0 0 25px #335e32;
   object-fit: cover;
 }
 
@@ -165,7 +165,7 @@ header {
   font-family: "Sora", sans-serif;
   font-weight: 700;
   font-size: 3rem;
-  color: #1ec773; /* Verde principal */
+  color: #295827; /* Verde principal */
   letter-spacing: 2px;
 }
 
@@ -180,9 +180,22 @@ header {
 
 /* Texto animado (span) para garantir cor verde */
 .typed-text {
-  color: #1ec773;
+  color: #295827;
   font-family: 'Sora', sans-serif;
   font-weight: 700;
+}
+
+/* Efeito de cursor piscando para animação Hello World */
+.typed-text::after {
+  content: "|";
+  animation: blink 0.8s steps(1) infinite;
+  color: #295827;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
 }
 
 /* Botão principal reutilizável */
@@ -197,7 +210,7 @@ header {
 }
 
 .btn-primary:hover {
-  background-color: #ff00c8;
+  background-color: #295827;
 }
 
 /* Hero responsivo */
@@ -370,7 +383,7 @@ header {
 }
 
 .projeto-card .btns a:hover {
-  background-color: #ff00c8;
+  background-color: #335e32;
 }
 
 /* Card de contato com links sociais */
@@ -411,7 +424,7 @@ header {
 }
 
 .btn-social:hover {
-  background-color: #ff00c8;
+  background-color: #335e32;
   color: #fff;
 }
 
