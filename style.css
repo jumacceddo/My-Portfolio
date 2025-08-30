@@ -181,7 +181,7 @@ header {
 /* Texto animado (span) para garantir cor verde */
 .typed-text {
   color: #fff;
-  font-family: "Tanbuster", "Sora", sans-serif;
+  font-family: "Tanbuster", sans-serif;
   font-weight: 700;
 }
 
@@ -475,9 +475,11 @@ footer a:hover {
   color: #FFC300;
 }
 
-/* 1. Degradê contínuo para body e hero */
+/* 1. Degradê contínuo para body, hero, header e footer */
 body,
-.hero {
+.hero,
+header,
+footer {
   background: linear-gradient(135deg, #3e2723 0%, #000 100%);
   color: #fff;
 }
@@ -494,7 +496,7 @@ body,
 .section-title,
 .hero-text h2,
 h1, h2, h3 {
-  font-family: "Tanbuster", "Sora", sans-serif;
+  font-family: "Tanbuster", sans-serif;
   color: #fff;
 }
 
@@ -511,32 +513,29 @@ footer a {
   color: #fff;
 }
 
-/* 4. Containers brancos, texto preto dentro deles */
-.container,
-.skill-card,
-.projeto-card,
+/* 4. Mantenha containers brancos só para skills e contato */
+.skills-grid,
 .contato-card {
   background-color: #fff;
   color: #222;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.08);
 }
 
-/* 5. Títulos dentro de containers brancos continuam com Tanbuster e cor preta */
-.container .section-title,
-.container h2,
-.container h3,
-.container h1,
-.skill-card span,
-.projeto-card h3,
+/* 5. Títulos dentro desses containers continuam com Tanbuster e cor preta */
+.skills-grid .section-title,
+.skills-grid h2,
+.skills-grid h3,
 .contato-card h2 {
-  font-family: "Tanbuster", "Sora", sans-serif;
+  font-family: "Tanbuster", sans-serif;
   color: #222;
 }
 
-/* 6. Textos dentro de containers brancos são pretos */
-.container p,
-.skill-card p,
-.projeto-card p,
-.contato-card p {
+/* 6. Textos dentro desses containers são pretos */
+.skills-grid p,
+.contato-card p,
+.skill-card span {
   color: #222;
 }
 
@@ -544,22 +543,11 @@ footer a {
 .typed-text,
 .typed-text::after {
   color: #fff;
-  font-family: "Tanbuster", "Sora", sans-serif;
+  font-family: "Tanbuster", sans-serif;
   font-weight: 700;
 }
 
-/* 8. Remover qualquer cor dourada */
-.navbar a,
-.navbar a:hover,
-footer a,
-footer a:hover,
-.skill-card span,
-.projeto-card h3,
-.contato-card h2 {
-  color: inherit;
-}
-
-/* 9. Scroll suave */
+/* 8. Scroll suave */
 html {
   scroll-behavior: smooth;
 }
