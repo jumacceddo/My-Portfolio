@@ -291,6 +291,14 @@ header {
   color: #333;
 }
 
+/* Ícone personalizado para CapCut */
+.skill-icon-capcut {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
 /* Tags de skills alternativa (não usada por padrão) */
 .skills-list-icons {
   display: flex;
