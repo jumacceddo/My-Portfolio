@@ -15,7 +15,7 @@
 body {
   font-family: "Sora", sans-serif;
   background: linear-gradient(135deg, #3e2723 0%, #000 100%);
-  color: #222;
+  color: #FFD700; /* Dourado */
   line-height: 1.6;
 }
 
@@ -82,7 +82,7 @@ header {
 }
 
 .navbar a:hover {
-  color: #460738;
+  color: #FFC300;
 }
 
 /* Ícone do menu mobile */
@@ -288,15 +288,19 @@ header {
 .skill-card span {
   font-weight: 600;
   font-size: 0.95rem;
-  color: #333;
+  color: #FFD700; /* Dourado */
 }
 
-/* Ícone personalizado para CapCut */
+/* Ícone personalizado para CapCut - tamanho igual aos outros */
 .skill-icon-capcut {
   width: 40px;
   height: 40px;
   object-fit: contain;
   margin-bottom: 0.5rem;
+  display: block;
+  /* Centraliza verticalmente na skill-card */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Tags de skills alternativa (não usada por padrão) */
@@ -365,6 +369,7 @@ header {
 .projeto-card h3 {
   margin: 1rem;
   font-size: 1.25rem;
+  color: #FFD700; /* Dourado */
 }
 
 .projeto-card p {
@@ -409,6 +414,7 @@ header {
 .contato-card h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
+  color: #FFD700; /* Dourado */
 }
 
 .contato-card p {
@@ -464,4 +470,42 @@ footer a {
 
 footer a:hover {
   text-decoration: underline;
+  color: #FFC300;
+}
+
+body,
+.hero,
+.skill-card,
+.projeto-card,
+.contato-card,
+footer {
+  background: linear-gradient(135deg, #3e2723 0%, #000 100%);
+}
+
+/* Cor dourada legível para textos */
+body,
+.hero-text h2,
+.hero-text p,
+.section-title,
+.section-subtitle,
+.section-text,
+.skill-card span,
+.projeto-card h3,
+.projeto-card p,
+.contato-card h2,
+.contato-card p,
+.btn,
+.btn-primary,
+.btn-social,
+footer,
+footer a {
+  color: #FFD700; /* Dourado */
+}
+
+/* Ajuste para links dourados no hover */
+.navbar a:hover,
+.btn-primary:hover,
+.btn-social:hover,
+footer a:hover {
+  color: #FFC300;
 }
