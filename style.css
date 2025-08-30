@@ -13,16 +13,20 @@
 }
 
 body {
-  font-family: "Sora", sans-serif;
   background: linear-gradient(135deg, #3e2723 0%, #000 100%);
-  color: #FFD700; /* Dourado */
+  font-family: "Sora", sans-serif;
+  color: #fff;
   line-height: 1.6;
+  scroll-behavior: smooth; /* Scrolling suave */
 }
 
+/* Containers com fundo branco */
 .container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 1rem auto;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 /* Header fixo com logo e navegação */
@@ -508,4 +512,22 @@ footer a {
 .btn-social:hover,
 footer a:hover {
   color: #FFC300;
+}
+
+/* Customização da scrollbar para scroll fluido */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #3e2723;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #222;
 }
