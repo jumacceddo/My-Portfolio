@@ -12,21 +12,19 @@
   box-sizing: border-box;
 }
 
-/* Importação da fonte Tanbuster */
+/* Importação correta da fonte TAN Nimbus */
 @font-face {
-  font-family: "Tanbuster";
-  src: url("assets/fonts/Tanbuster-Regular.woff2") format("woff2"),
-       url("assets/fonts/Tanbuster-Regular.woff") format("woff"),
-       url("assets/fonts/TanBuster-Regular.woff2") format("woff2"),
-       url("assets/fonts/TanBuster-Regular.woff") format("woff");
+  font-family: "TAN Nimbus";
+  src: url("assets/fonts/TAN-NIMBUS.ttf") format("truetype"),
+       url("assets/fonts/TAN-NIMBUS.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 body {
-  font-family: "Sora", sans-serif;
-  background: linear-gradient(135deg, #8B4513 0%, #654321 50%, #3e2723 100%);
+  font-family: "TAN Nimbus", sans-serif;
+  background: linear-gradient(135deg, #3e2723 0%, #000 100%);
   color: #fff;
   line-height: 1.6;
   min-height: 100vh;
@@ -57,7 +55,7 @@ header {
 }
 
 .logo {
-  font-family: "Tanbuster", "Sora", sans-serif;
+  font-family: "'TAN Nimbus'";
   font-size: 1.75rem;
   font-weight: normal;
   color: #fff;
@@ -243,7 +241,7 @@ header {
 }
 
 .hero-text h2 {
-  font-family: "Tanbuster", "Sora", sans-serif;
+  font-family: "TAN Nimbus";
   font-weight: normal;
   font-size: 3.5rem;
   color: #fff;
@@ -264,7 +262,7 @@ header {
 /* Texto animado (span) para garantir cor branca */
 .typed-text {
   color: #fff;
-  font-family: "Tanbuster", "Sora", sans-serif;
+  font-family: "TAN Nimbus";
   font-weight: normal;
 }
 
@@ -336,7 +334,7 @@ header {
 }
 
 .section-title {
-  font-family: "Tanbuster", "Sora", sans-serif;
+  font-family: "TAN Nimbus";
   font-size: 2.5rem;
   color: #fff;
   margin-bottom: 1rem;
@@ -364,7 +362,7 @@ header {
 
 /* Container específico para skills */
 .skills-container {
-  background-color: #fff;
+  background: linear-gradient(135deg, #000 100%, #3e2723 0%);
   color: #222;
   border-radius: 12px;
   padding: 3rem 2rem;
@@ -374,7 +372,7 @@ header {
 }
 
 .skills-container h2 {
-  font-family: "Tanbuster", "Sora", sans-serif;
+  font-family: "TAN Nimbus";
   color: #222;
   text-align: center;
   margin-bottom: 2rem;
@@ -436,7 +434,7 @@ header {
 
 /* Container específico para projetos */
 .projetos-container {
-  background-color: #fff;
+  background: linear-gradient(135deg, #000 100%, #3e2723 0%);
   color: #222;
   border-radius: 12px;
   padding: 3rem 2rem;
@@ -446,7 +444,7 @@ header {
 }
 
 .projetos-container h2 {
-  font-family: "Tanbuster", "Sora", sans-serif;
+  font-family: "TAN Nimbus";
   color: #222;
   text-align: center;
   margin-bottom: 2rem;
@@ -483,7 +481,7 @@ header {
 }
 
 .projeto-card h3 {
-  font-family: "Tanbuster", "Sora", sans-serif;
+  font-family: "TAN Nimbus";
   margin: 1rem;
   font-size: 1.25rem;
   color: #335e32;
@@ -520,7 +518,7 @@ header {
 
 /* Card de contato com links sociais */
 .contato-card {
-  background: #fff;
+  background: linear-gradient(135deg, #000 100%, #3e2723 0%);
   border: 2px solid #eee;
   border-radius: 12px;
   padding: 3rem 2rem;
@@ -531,7 +529,7 @@ header {
 }
 
 .contato-card h2 {
-  font-family: "Tanbuster", "Sora", sans-serif;
+  font-family: "TAN Nimbus";
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #222;
@@ -594,7 +592,7 @@ footer a:hover {
   color: #335e32;
 }
 
-/* Todos os títulos com fonte Tanbuster */
+/* Todos os títulos com fonte TAN Nimbus */
 h1, h2, h3, h4, h5, h6,
 .section-title,
 .hero-text h2,
@@ -603,7 +601,7 @@ h1, h2, h3, h4, h5, h6,
 .projetos-container h2,
 .contato-card h2,
 .projeto-card h3 {
-  font-family: "Tanbuster", "Sora", sans-serif !important;
+  font-family: "TAN Nimbus" !important;
   font-weight: normal !important;
 }
 
