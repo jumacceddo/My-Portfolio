@@ -12,6 +12,15 @@
   box-sizing: border-box;
 }
 
+/* Importação da fonte Tanbuster */
+@font-face {
+  font-family: "Tanbuster";
+  src: url("assets/fonts/TanBuster-Regular.woff2") format("woff2"),
+       url("assets/fonts/TanBuster-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: "Sora", sans-serif;
   background: linear-gradient(135deg, #3e2723 0%, #000 100%);
@@ -19,17 +28,16 @@ body {
   line-height: 1.6;
 }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 1rem;
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
 }
 
 /* Header fixo com logo e navegação */
 header {
-  background-color: #111;
-  padding: 0.82rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #3e2723 0%, #000 100%);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -40,9 +48,12 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo {
+  font-family: "Tanbuster", "Sora", sans-serif;
   font-size: 1.75rem;
   font-weight: 800;
   color: #fff;
@@ -108,7 +119,7 @@ header {
     display: none;
     width: 100%;
     flex-direction: column;
-    background-color: #111;
+    background: linear-gradient(135deg, #3e2723 0%, #000 100%);
     margin-top: 1rem;
     border-top: 1px solid #333;
     padding-top: 1rem;
@@ -128,9 +139,9 @@ header {
 .hero {
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #f1f1f1 0%, #eaeaea 100%);
+  background: linear-gradient(135deg, #3e2723 0%, #000 100%);
   padding: 5rem 2rem;
-  height: 80vh;
+  min-height: 80vh;
 }
 
 .hero-grid {
@@ -139,12 +150,19 @@ header {
   justify-content: center;
   gap: 3rem;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .hero-img {
   flex: 1;
   text-align: center;
   animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
 }
 
 .profile-img {
@@ -162,10 +180,10 @@ header {
 }
 
 .hero-text h2 {
-  font-family: "Sora", sans-serif;
+  font-family: "Tanbuster", "Sora", sans-serif;
   font-weight: 700;
   font-size: 3rem;
-  color: #295827; /* Verde principal */
+  color: #fff;
   letter-spacing: 2px;
 }
 
@@ -176,12 +194,13 @@ header {
 
 .hero-text p {
   margin: 1rem 0 2rem;
+  color: #fff;
 }
 
-/* Texto animado (span) para garantir cor verde */
+/* Texto animado (span) para garantir cor branca */
 .typed-text {
   color: #fff;
-  font-family: "Tanbuster", sans-serif;
+  font-family: "Tanbuster", "Sora", sans-serif;
   font-weight: 700;
 }
 
@@ -200,13 +219,14 @@ header {
 
 /* Botão principal reutilizável */
 .btn-primary {
-  background-color: #111;
+  background-color: #335e32;
   color: #fff;
   padding: 0.75rem 1.5rem;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
   transition: background 0.3s ease;
+  display: inline-block;
 }
 
 .btn-primary:hover {
@@ -228,36 +248,68 @@ header {
   .hero-text {
     align-items: center;
   }
+
+  .hero-text h2 {
+    font-size: 2.5rem;
+  }
 }
 
 /* Seções gerais */
 .section {
   padding: 3rem 2rem;
+  background: linear-gradient(135deg, #3e2723 0%, #000 100%);
 }
 
 .section-title {
+  font-family: "Tanbuster", "Sora", sans-serif;
+  font-size: 2.5rem;
+  color: #fff;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .section-subtitle {
   font-size: 1.1rem;
-  color: #444;
+  color: #fff;
   margin-bottom: 2rem;
   line-height: 1.6;
+  text-align: center;
 }
 
 .section-text {
   font-size: 1.05rem;
   line-height: 1.8;
-  color: #333;
+  color: #fff;
   margin-bottom: 1.2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Container específico para skills */
+.skills-container {
+  background-color: #fff;
+  color: #222;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skills-container h2 {
+  font-family: "Tanbuster", "Sora", sans-serif;
+  color: #222;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
 }
 
 /* Grid de skills (cards) */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
   margin-top: 2rem;
   justify-items: center;
 }
@@ -268,28 +320,30 @@ header {
   align-items: center;
   gap: 0.5rem;
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   border-radius: 8px;
-  width: 6rem;
-  height: 6rem;
-  background-color: #fff;
+  width: 100%;
+  max-width: 140px;
+  background-color: #f8f9fa;
   color: #222;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .skill-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 .skill-card i {
-  font-size: 40px;
+  font-size: 2.5rem;
+  color: #335e32;
 }
 
 .skill-card span {
   font-weight: 600;
   font-size: 0.95rem;
-  color: #FFD700; /* Dourado */
+  color: #222;
 }
 
 /* Ícone personalizado para CapCut - tamanho igual aos outros */
@@ -299,45 +353,27 @@ header {
   object-fit: contain;
   margin-bottom: 0.5rem;
   display: block;
-  /* Centraliza verticalmente na skill-card */
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Tags de skills alternativa (não usada por padrão) */
-.skills-list-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1.5rem;
+/* Container específico para projetos */
+.projetos-container {
+  background-color: #fff;
+  color: #222;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.skill-tag {
-  background-color: #111;
-  color: #fff;
-  padding: 0.6rem 1rem;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-
-.skill-tag i {
-  font-size: 1.1rem;
-}
-
-/* Botão base genérico */
-.btn {
-  display: inline-block;
-  margin-top: 1rem;
-  background-color: #222;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
+.projetos-container h2 {
+  font-family: "Tanbuster", "Sora", sans-serif;
+  color: #222;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
 }
 
 /* Seção de projetos */
@@ -369,9 +405,10 @@ header {
 }
 
 .projeto-card h3 {
+  font-family: "Tanbuster", "Sora", sans-serif;
   margin: 1rem;
   font-size: 1.25rem;
-  color: #FFD700; /* Dourado */
+  color: #335e32;
 }
 
 .projeto-card p {
@@ -395,6 +432,7 @@ header {
   border-radius: 4px;
   font-weight: bold;
   font-size: 0.9rem;
+  transition: background 0.3s ease;
 }
 
 .projeto-card .btns a:hover {
@@ -403,20 +441,21 @@ header {
 
 /* Card de contato com links sociais */
 .contato-card {
-  background: linear-gradient(135deg, #fdfdfd, #f3f3f3);
+  background: #fff;
   border: 2px solid #eee;
   border-radius: 12px;
   padding: 3rem 2rem;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   max-width: 700px;
   margin: 0 auto;
 }
 
 .contato-card h2 {
-  font-size: 1.8rem;
+  font-family: "Tanbuster", "Sora", sans-serif;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #FFD700; /* Dourado */
+  color: #222;
 }
 
 .contato-card p {
@@ -460,12 +499,12 @@ footer {
   text-align: center;
   padding: 2rem 1rem;
   font-size: 0.9rem;
-  color: #666;
-  background-color: #111;
+  color: #ccc;
+  background: linear-gradient(135deg, #3e2723 0%, #000 100%);
 }
 
 footer a {
-  color: #f9f9f9;
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
 }
@@ -475,89 +514,44 @@ footer a:hover {
   color: #FFC300;
 }
 
-/* 1. Degradê contínuo para body, header, hero e footer */
-body,
-header,
-.hero,
-footer {
-  background: linear-gradient(135deg, #3e2723 0%, #000 100%) !important;
-  color: #fff;
-}
-
-/* 2. Títulos com Tanbuster */
-@font-face {
-  font-family: "Tanbuster";
-  src: url("assets/fonts/TanBuster-Regular.woff2") format("woff2"),
-       url("assets/fonts/TanBuster-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
+/* Todos os títulos com fonte Tanbuster */
+h1, h2, h3, h4, h5, h6,
 .section-title,
 .hero-text h2,
-h1, h2, h3,
 .logo {
   font-family: "Tanbuster", "Sora", sans-serif !important;
-  color: #fff !important;
 }
 
-/* 3. Textos de corpo sempre brancos no fundo escuro */
-body,
-.hero-text p,
-.section-text,
-.section-subtitle,
-.btn,
-.btn-primary,
-.btn-social,
-footer,
-footer a {
-  color: #fff !important;
+/* Botão base genérico */
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #335e32;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
-/* 4. Containers brancos só para skills e contato */
-.skills-grid,
-.contato-card,
-.projetos-grid,
-.projeto-card,
-.container {
-  background-color: #fff !important;
-  color: #222 !important;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+.btn:hover {
+  background-color: #295827;
 }
 
-/* 5. Títulos dentro desses containers continuam com Tanbuster e cor preta */
-.skills-grid .section-title,
-.skills-grid h2,
-.skills-grid h3,
-.contato-card h2,
-.projeto-card h3,
-.container h1,
-.container h2,
-.container h3 {
-  font-family: "Tanbuster", "Sora", sans-serif !important;
-  color: #222 !important;
-}
-
-/* 6. Textos dentro desses containers são pretos */
-.skills-grid p,
-.contato-card p,
-.skill-card span,
-.projeto-card p,
-.container p,
-.container a {
-  color: #222 !important;
-}
-
-/* 7. Texto animado Hello World sempre branco no fundo escuro */
-.typed-text,
-.typed-text::after {
-  color: #fff !important;
-  font-family: "Tanbuster", "Sora", sans-serif !important;
-  font-weight: 700;
-}
-
-/* 8. Scroll suave */
-html {
-  scroll-behavior: smooth;
+/* Responsivo geral */
+@media (max-width: 768px) {
+  .section {
+    padding: 2rem 1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .skills-container,
+  .projetos-container,
+  .contato-card {
+    margin: 0 1rem;
+  }
 }
