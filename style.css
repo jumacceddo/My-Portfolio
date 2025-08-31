@@ -12,7 +12,24 @@
   box-sizing: border-box;
 }
 
-/* Importação correta da fonte TAN Nimbus */
+/* Importação das fontes customizadas */
+@font-face {
+  font-family: "resien";
+  src: url("assets/fonts/resien.ttf") format("truetype"),
+       url("assets/fonts/resien.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "thetelegraph-bold";
+  src: url("assets/fonts/thetelegraph-bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 @font-face {
   font-family: "TAN Nimbus";
   src: url("assets/fonts/TAN-NIMBUS.ttf") format("truetype"),
@@ -23,7 +40,7 @@
 }
 
 body {
-  font-family: "TAN Nimbus", sans-serif;
+  font-family: "resien", sans-serif;
   background: linear-gradient(135deg, #3e2723 0%, #000 100%);
   color: #fff;
   line-height: 1.6;
@@ -730,13 +747,13 @@ h1, h2, h3, h4, h5, h6,
 }
 
 .newspaper-title {
-    font-family: 'Times New Roman', serif;
-    font-size: 3rem;
-    font-weight: bold;
-    color: #2c1810;
-    text-shadow: 1px 1px 0px rgba(139, 69, 19, 0.2);
-    letter-spacing: 2px;
-    margin-bottom: 3px;
+  font-family: "thetelegraph-bold", serif;
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: #2c1810;
+  text-shadow: 1px 1px 0px rgba(139, 69, 19, 0.2);
+  letter-spacing: 2px;
+  margin-bottom: 3px;
 }
 
 .newspaper-subtitle {
