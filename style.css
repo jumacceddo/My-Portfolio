@@ -23,14 +23,6 @@
 }
 
 @font-face {
-  font-family: "thetelegraph-bold";
-  src: url("assets/fonts/thetelegraph-bold.otf") format("opentype");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: "TAN Nimbus";
   src: url("assets/fonts/TAN-NIMBUS.ttf") format("truetype"),
        url("assets/fonts/TAN-NIMBUS.otf") format("opentype");
@@ -633,17 +625,52 @@ footer a:hover {
   color: #335e32;
 }
 
-/* Todos os títulos com fonte TAN Nimbus */
+/* Corpo do site e textos do jornal */
+body,
+.article-paragraph,
+.newspaper-date,
+.newspaper-subtitle,
+.headline-text,
+.headline-subtitle {
+  font-family: "resien", sans-serif !important;
+  font-size: 1.25rem; /* Aumenta o tamanho da fonte do corpo */
+  color: #3e2723;
+}
+
+/* Título do jornal e títulos principais */
+.newspaper-title,
+.headline-title,
 h1, h2, h3, h4, h5, h6,
 .section-title,
-.hero-text h2,
 .logo,
 .skills-container h2,
 .projetos-container h2,
 .contato-card h2,
 .projeto-card h3 {
-  font-family: "TAN Nimbus" !important;
+  font-family: "TAN Nimbus", serif !important;
   font-weight: normal !important;
+  color: #2c1810;
+}
+
+/* Centraliza a foto do jornal */
+.photo-highlight {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.photo-highlight img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 420px;
+  max-height: 420px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 8px 32px rgba(139, 69, 19, 0.18);
+  border: 3px solid #8b4513;
+  background: #f5f1e8;
 }
 
 /* Botão base genérico */
