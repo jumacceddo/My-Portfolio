@@ -142,8 +142,8 @@ header {
   display: flex;
   align-items: center;
   background: transparent;
-  padding: 5rem 2rem;
-  min-height: 80vh;
+  padding: 2rem 0; /* Reduz o padding para expandir o jornal */
+  min-height: 95vh; /* Ocupa quase toda a altura da tela */
 }
 
 .hero-grid {
@@ -164,6 +164,30 @@ header {
   grid-column: 2;
   text-align: center;
   position: relative;
+}
+
+/* Efeito de jornal para o hero */
+.newspaper-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.newspaper-container {
+    position: relative;
+    width: 98vw;      /* Quase toda a largura da tela */
+    height: 85vh;     /* Quase toda a altura da tela */
+    max-width: 1400px; /* Limite para telas grandes */
+    max-height: 900px; /* Limite para telas grandes */
+    transform: translateY(-100%);
+    animation: slideDown 2s ease-out forwards;
+    animation-delay: 1s;
 }
 
 /* Animações */
@@ -654,8 +678,10 @@ h1, h2, h3, h4, h5, h6,
 
 .newspaper-container {
     position: relative;
-    width: 850px;
-    height: 550px;
+    width: 98vw;      /* Quase toda a largura da tela */
+    height: 85vh;     /* Quase toda a altura da tela */
+    max-width: 1400px; /* Limite para telas grandes */
+    max-height: 900px; /* Limite para telas grandes */
     transform: translateY(-100%);
     animation: slideDown 2s ease-out forwards;
     animation-delay: 1s;
@@ -875,12 +901,18 @@ h1, h2, h3, h4, h5, h6,
 /* Responsividade */
 @media (max-width: 1024px) {
     .newspaper-container {
-        width: 90%;
-        height: 70%;
+        width: 98vw;
+        height: 80vh;
+        max-width: 98vw;
+        max-height: 80vh;
     }
 }
 
 @media (max-width: 768px) {
+    .hero {
+        padding: 1rem 0;
+        min-height: 80vh;
+    }
     .newspaper-container {
         width: 95%;
         height: 75%;
